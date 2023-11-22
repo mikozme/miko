@@ -1,0 +1,46 @@
+<!doctype html>
+                <html lang="en">
+                  <head>
+                      <link rel="stylesheet" href="/static/css/araxis.css">
+                    <meta charset="utf-8">
+                  </head>
+                  <body>
+                    <section class="product">
+  <div class="product__photo">
+    <div class="photo-container">
+      <div class="photo-main">
+
+        <img src="/static/img/nut_finiki.jpg" height="350">
+      </div>
+
+    </div>
+  </div>
+  <div class="product__info">
+    <div class="title">
+      <h1>Финики сушенные без косточки</h1>
+      <span>{{ massa }}</span>Г
+    </div>
+    <div class="price">
+     <span>{{ price }}</span>₸
+    </div>
+
+    <div class="description">
+      <h3>ПОЛЬЗА</h3>
+      <ul>
+        <li>Успокаивают кашель и выводят мокроту</li>
+        <li>Улучшают состояние микрофлоры кишечника</li>
+        <li>Благотворно влияют на сердце, почки и печень</li>
+        <li>Помогают бороться с вирусными инфекциями</li>
+      </ul>
+    </div>
+    <form action="/Orexof/finik" method="post">
+    <input type="submit" class="buy--btn" value="в корзину">
+    <div class="quantity">
+      <input type="text" id="amount" name="amount" value=1>
+    </div>
+  </div>
+</section>
+
+<butt3 type="button" onclick="document.location='/'">Назад </butt3>
+                  </body>
+                </html>

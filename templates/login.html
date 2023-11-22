@@ -1,0 +1,37 @@
+<!doctype html>
+                <html lang="en">
+                  <head>
+                  <link rel="stylesheet" type="text/css" href="../static/css/login.css">
+                <meta name="viewport" content="width=device-width, initial=scale=1.0">
+                    <meta charset="utf-8">
+                    <title>Вход</title>
+                  </head>
+                  <body>
+                  {% block content %}
+                  <div class="wrapper">
+                      <h2>Вход</h2>
+                      <form action="/Orexof/login" method="post">
+                           <div class="input-box">
+                               {{ form.hidden_tag() }}
+                    {{ form.email(class="input-box", type="email", placeholder="Введите почту") }}
+                    {% for error in form.email.errors %}
+                          </div>
+                          {% endfor %}
+                            <br>
+                          <div class="input-box">
+                    {{ form.password(class="form-control", type="password", placeholder="Введите пароль") }}
+                    {% for error in form.password.errors %}
+
+                          </div>
+                           {% endfor %}
+                          <div class="input-box button">
+                              {{ form.submit(type="submit", class="btn btn-outline-secondary") }}
+                          </div>
+                          <div class="text">
+                              <h3>У вас нет аккаунта? <a href="/Orexof/register">Зарегистрироваться</a></h3>
+                          </div>
+                      </form>
+            {% endblock %}
+                  </div>
+                  </body>
+                </html>

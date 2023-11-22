@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="/static/css/korzina.css">
+</head>
+<body>
+	<main class="page">
+	 	<section class="shopping-cart dark">
+	 		<div class="container">
+		        <div class="content">
+	 				<div class="row">
+	 					<div class="col-md-12 col-lg-8">
+	 						<div class="items">
+				 				<div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/nut_arahis.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">Арахис жаренный соленый</a>
+								 							<div class="product-info">
+									 							<div >{{arah_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{arah_price}}</span>
+							 						</div>
+													<div class="col-md-3 price">
+														{{ar_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div>
+				 				<div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/nut_gretskiy.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">Грецкий орех</a>
+								 							<div class="product-info">
+									 							<div>{{grez_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{grez_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{gr_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div>
+								<div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/nut_keshy.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">Кешью</a>
+								 							<div class="product-info">
+									 							<div>{{kesh_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{kesh_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{ks_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div><div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/nut_mindal.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">миндаль</a>
+								 							<div class="product-info">
+									 							<div>{{mind_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{mind_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{mi_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div><div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/nut_fistash.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">фисташки</a>
+								 							<div class="product-info">
+									 							<div>{{braz_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{braz_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{br_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div><div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/nut_brazil.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">бразильский</a>
+								 							<div class="product-info">
+									 							<div>{{fist_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{fist_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{fs_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div><div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/nut_funduk.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">фундук</a>
+								 							<div class="product-info">
+									 							<div>{{fund_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{fund_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{fu_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div><div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/nut_pekan.jpeg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">пекан</a>
+								 							<div class="product-info">
+									 							<div>{{peka_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{peka_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{pe_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div><div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/suho_wishnia.webp">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">фишня суш.</a>
+								 							<div class="product-info">
+									 							<div>{{vish_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{vish_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{vi_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div><div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/suho_izum.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">изюм</a>
+								 							<div class="product-info">
+									 							<div>{{izum_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{izum_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{iz_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div><div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/suho_inzir.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">инжир сушх</a>
+								 							<div class="product-info">
+									 							<div>{{inzh_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{inzh_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{in_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div><div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/suho_kuraga.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">курага суш</a>
+								 							<div class="product-info">
+									 							<div>{{kura_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{kura_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{ku_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div><div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/nut_finiki.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">финик суш</a>
+								 							<div class="product-info">
+									 							<div>{{fini_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{fini_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{fi_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div><div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/suho_chernosliv.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">чернослив суш</a>
+								 							<div class="product-info">
+									 							<div>{{cher_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{cher_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{ch_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div><div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/suho_tsukati.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">цукаткы суш</a>
+								 							<div class="product-info">
+									 							<div>{{cuka_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{cuka_price}}</span>
+													</div>
+													<div class="col-md-3 price">
+														{{cu_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div>
+				 				<div class="product">
+				 					<div class="row">
+					 					<div class="col-md-3">
+					 						<img class="img-fluid mx-auto d-block image" src="/static/img/suho_papaiya.jpg">
+					 					</div>
+					 					<div class="col-md-8">
+					 						<div class="info">
+						 						<div class="row">
+							 						<div class="col-md-5 product-name">
+							 							<div class="product-name">
+								 							<a href="#" style="color: #7BA7AB;">папайя суш</a>
+								 							<div class="product-info">
+									 							<div>{{papa_mass}}Г</div>
+									 						</div>
+									 					</div>
+							 						</div>
+							 						<div class="col-md-3 price">
+							 							₸<span>{{papa_price}}</span>
+							 						</div>
+													<div class="col-md-3 price">
+														{{pa_am}}x
+													</div>
+							 					</div>
+							 				</div>
+					 					</div>
+					 				</div>
+				 				</div>
+				 			</div>
+			 			</div>
+			 			<div class="col-md-12 col-lg-4">
+			 				<div class="summary">
+			 					<h3>Итого</h3>
+			 					<div class="summary-item"><span class="text">Итого</span><span class="price">₸{{total}}</span></div>
+			 					<div class="summary-item"><span class="text">Скидка</span><span class="price">₸{{sale}}</span></div>
+			 					<div class="summary-item"><span class="text">Итого со скидкой</span><span class="price">₸{{total_s}}</span></div>
+			 					<button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
+				 			</div>
+			 			</div>
+		 			</div>
+		 		</div>
+	 		</div>
+		</section>
+	</main>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

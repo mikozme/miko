@@ -1,0 +1,856 @@
+<!doctype html>
+                    <html lang="en">
+                      <head>
+                        <link rel="stylesheet" href="../static/css/base.css">
+                        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+                        rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+                        <meta charset="utf-8">
+                        <title>Интернет-магазин орехов и сухофруктов</title>
+                        <style>
+                        * {box-sizing: border-box;}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    min-height: 100vh;
+}
+form {
+  position: absolute;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.cart__num {
+  position: absolute;
+  background-color: #d62240;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  top: -5px;
+  right: -5px;
+}
+
+input {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  border: 2px solid #7BA7AB;
+  border-radius: 5px;
+  outline: none;
+  background: #F9F0DA;
+  color: #9E9C9C;
+  font-size: 25px
+}
+
+
+
+
+button1 {
+  position: absolute;
+  top: 60px;
+  left: 295px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  right: 0px;
+  width: 60px;
+  height: 40px;
+  border: none;
+  background: #7BA7AB;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center
+}
+
+  nav {
+            background-color: #7BA7AB;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+butt1 {
+  position: absolute;
+  top: 50px;
+  left: 425px;
+  font-weight: 1000;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  background: #7BA7AB;
+  border-radius: 5px;
+  box-shadow: 0 -3px #7BA7AB inset;
+  transition: 0.2s;
+}
+
+butt2{
+position: absolute;
+  top: 50px;
+  left: 1300px;
+  font-weight: 1000;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  background: #7BA7AB;
+  border-radius: 5px;
+  box-shadow: 0 -3px #7BA7AB inset;
+  transition: 0.2s;
+}
+
+butt3{
+position: absolute;
+  top: 50px;
+  left: 1500px;
+  font-weight: 1000;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  background: #7BA7AB;
+  border-radius: 5px;
+  box-shadow: 0 -3px #7BA7AB inset;
+  transition: 0.2s;
+}
+
+button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #F9F0DA;
+}
+
+
+button7 {
+  position: absolute;
+  left: 1525px;
+  top: 0px;
+  weight: 10%;
+  height: 40px;
+  font-weight: 1000;
+  color:black;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  background: ;
+  border-radius: none;
+  box-shadow: none;
+  transition: 0.2s;
+}
+
+button8 {
+  position: absolute;
+  weight: 10%;
+  height: 40px;
+  font-weight: 1000;
+  color:black;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  background: ;
+  border-radius: none;
+  box-shadow: none;
+  transition: 0.2s;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900);
+
+h1,
+p,
+a{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato';
+}
+
+h1 {
+  font-size: 2.8em;
+  padding: 10px 0;
+  font-weight: 800;
+}
+
+p {
+  font-size: 1.1em;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+
+.header {
+  position: absolute;
+  left: 250px;
+  top: 200px;
+  width: 1450px;
+  padding:60px 0;
+  text-align: center;
+  background: #7BA7AB;
+  color: white;
+}
+
+
+
+@media screen and (min-width: 500px) {
+   body {
+      width:420px;
+   }
+}
+@media screen and (min-width: 800px) {
+   body {
+      width:720px;
+   }
+
+.btn-bgstroke {
+  font-size: 20px;
+  display: inline-block;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 300;
+  margin-top: 30px;
+}
+
+.btn-bgstroke:hover {
+  background-color: white;
+  color: #33cccc;
+}
+
+.card {
+  width: 225px;
+  min-height: 350px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Размещаем элементы в колонку */
+  border-radius: 4px;
+  transition: 0.2s;
+  position: relative;
+}
+
+
+.card:hover {
+  box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+}
+
+.card__top {
+  flex: 0 0 220px; /* Задаем высоту 220px, запрещаем расширение и сужение по высоте */
+  position: relative;
+  overflow: hidden; /* Скрываем, что выходит за пределы */
+}
+
+/* Контейнер для картинки */
+.card__image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Встраиваем картинку в контейнер card__image */
+  transition: 0.2s;
+}
+
+/* При наведении - увеличиваем картинку */
+.card__image:hover > img {
+  transform: scale(1.1);
+}
+
+/* Размещаем скидку на товар относительно изображения */
+.card__label {
+  padding: 4px 8px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #ff6633;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+
+.card__bottom {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto; /* Занимаем всю оставшуюся высоту карточки */
+  padding: 10px;
+}
+
+.card__prices {
+  display: flex;
+  margin-bottom: 10px;
+  float: top;
+}
+
+.card__price::after {
+  content: "₸";
+  margin-left: 4px;
+  position: relative;
+}
+
+.card__price--discount {
+  font-weight: 700;
+  font-size: 19px;
+  color: #414141;
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.card__price--discount::before {
+  content: "Со скидкой";
+  font-weight: 400;
+  font-size: 13px;
+  color: #bfbfbf;
+}
+
+.card__price--common {
+  font-weight: 400;
+  font-size: 17px;
+  color: #606060;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+}
+
+.card__price--common::before {
+  content: "Обычная";
+  font-weight: 400;
+  font-size: 13px;
+  color: #bfbfbf;
+}
+
+.card__title {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: #414141;
+}
+
+.card__title:hover {
+  color: #ff6633;
+}
+
+.card__add {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 17px;
+  color: #70c05b;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #70c05b;
+  border-radius: 4px;
+  cursor: pointer; /* Меняем курсор при наведении */
+  transition: 0.2s;
+  margin-top: auto; /* Прижимаем кнопку к низу карточки */
+}
+
+.card__add:hover {
+  border: 1px solid #ff6633;
+  background-color: #ff6633;
+  color: #fff;
+}
+
+setka {
+position: absolute;
+top: 600px;
+left: 100px;
+}
+
+setka1 {
+position: absolute;
+top: 1200px;
+
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+table.tb1{
+left: 120px;
+position: absolute;
+top: 675px;
+border-spacing: 10px 10px;
+}
+
+table.tb2{
+left: 120px;
+position: absolute;
+top: 1750px;
+border-spacing: 10px 10px;
+}
+
+h1.vir{
+position: absolute;
+top: 550px;
+left: 900px;
+}
+h1.vir2{
+position: absolute;
+top: 1600px;
+left: 850px;
+}
+footer{
+background-color: black;
+color: white;
+text-align: center;
+margin: auto;
+position: absolute;
+width: 110%;
+padding: 20px 0;
+top: 2600px;
+right: 1px;
+}
+                        </style>
+
+                      </head>
+                      <body>
+
+
+   <div class="container">
+     <div class="row">
+       <div class="col-4">
+
+         <a href="http://127.0.0.1:5000/"><img src=/static/img/butt_orexoff.png width="200" height="105"></a>
+       </div>
+
+
+       <div class="col">
+         <butt2 type="button" onclick="document.location='/Orexof/korzina'">Корзина <img src="/static/img/butt_korzina.png" weight="20" height="20">
+         <div class="cart__num" id="cart_num">{{ counter }}</div></butt2>
+       </div>
+       <div class="col">
+         <butt3 type="button" onclick="document.location='/Orexof/register'">Вход/Регистрация <img src="/static/img/butt_profile.png" weight="20" height="20"></butt3>
+       </div>
+
+
+
+       <section class="header">
+    <h1>Осенняя акция!</h1>
+    <p>Скидка на все товары 10%</p>
+     </section>
+
+<h1 class="vir">Орехи</h1>
+
+<table class="tb1">
+  <tr>
+    <td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexoff/araxis" class="card__image">
+      <img
+        src="/static/img/nut_arahis.jpg"
+        alt="Арахис 200гр."
+      />
+    </a>
+    <div class="card__label">-{{arah_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{arah_salep}}</div>
+      <div class="card__price card__price--common">{{arah_price}}</div>
+    </div>
+    <a href="/Orexoff/araxis" class="card__title">
+      Арахис жареный соленый, {{arah_mass}} г
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+<td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/gretz" class="card__image">
+      <img
+        src="/static/img/nut_gretskiy.jpg"
+        alt="Грецкий орех очищенный без обжарки, 500 г"
+      />
+    </a>
+    <div class="card__label">-{{grez_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{grez_salep}}</div>
+      <div class="card__price card__price--common">{{grez_price}}</div>
+    </div>
+    <a href="/Orexof/gretz" class="card__title">
+      Грецкий орех в скорлупе,{{grez_sale}} г
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+    <td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/keshy" class="card__image">
+      <img
+        src="/static/img/nut_keshy.jpg"
+        alt="Кешью сырой сушеный, 500 г"
+      />
+    </a>
+    <div class="card__label">-{{kesh_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{kesh_salep}}</div>
+      <div class="card__price card__price--common">{{kesh_price}}</div>
+    </div>
+    <a href="/Orexof/keshy" class="card__title">
+      Кешью сырой сушеный, {{kesh_mass}} г
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+<td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/mindal" class="card__image">
+      <img
+        src="/static/img/nut_mindal.jpg"
+        alt="Миндаль сырой очищенный 500г"
+      />
+    </a>
+    <div class="card__label">-{{mind_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{mind_salep}}</div>
+      <div class="card__price card__price--common">{{mind_price}}</div>
+    </div>
+    <a href="/Orexof/mindal" class="card__title">
+      Миндаль сырой очищенный, {{mind_mass}}г
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+  </tr>
+  <tr>
+  <td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/brazil" class="card__image">
+      <img
+        src="/static/img/nut_brazil.jpg"
+        alt="Бразильский орех очищенный 500 г."
+      />
+    </a>
+    <div class="card__label">-{{braz_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{braz_salep}}</div>
+      <div class="card__price card__price--common">{{braz_price}}</div>
+    </div>
+    <a href="/Orexof/brazil" class="card__title">
+      Бразильский орех очищенный, {{braz_mass}} г.
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+   <td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/fist" class="card__image">
+      <img
+        src="/static/img/nut_fistash.jpg"
+        alt="Фисташки жареные солёные 500г"
+      />
+    </a>
+    <div class="card__label">-{{fist_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{fist_salep}}</div>
+      <div class="card__price card__price--common">{{fist_price}}</div>
+    </div>
+    <a href="/Orexof/fist" class="card__title">
+      Фисташки жареные солёные, {{fist_mass}}г
+    </a>
+    <!-- Кнопка добавить в корзину -->
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+    <td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/fund" class="card__image">
+      <img
+        src="/static/img/nut_funduk.jpg"
+        alt="Фундук сырой сушеный, 500г"
+      />
+    </a>
+    <div class="card__label">-{{fund_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{fund_salep}}</div>
+      <div class="card__price card__price--common">{{fund_price}}</div>
+    </div>
+    <a href="/Orexof/fund" class="card__title">
+      Фундук сырой сушеный, {{fund_mass}}г
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+<td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/pekan" class="card__image">
+      <img
+        src="/static/img/nut_pekan.jpeg"
+        alt="Пекан в скорлупе, 500 г"
+      />
+    </a>
+    <div class="card__label">-{{peka_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{peka_salep}}</div>
+      <div class="card__price card__price--common">{{peka_price}}</div>
+    </div>
+    <a href="/Orexof/pekan" class="card__title">
+     Пекан очищенный сырой, {{peka_mass}} г
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+  </tr>
+</table>
+
+
+<h1 class="vir2">Сухофрукты</h1>
+
+
+
+
+
+
+
+
+
+<table class="tb2">
+  <tr>
+    <td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/vishnia" class="card__image">
+      <img
+        src="/static/img/suho_wishnia.webp"
+        alt="Вишня сушеная вяленая, 150 г"
+      />
+    </a>
+    <div class="card__label">-{{vish_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{vish_salep}}</div>
+      <div class="card__price card__price--common">{{vish_price}}</div>
+    </div>
+    <a href="/Orexof/vishnia" class="card__title">
+      Вишня сушеная вяленая, {{vish_mass}} г
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+    <td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/izum" class="card__image">
+      <img
+        src="/static/img/suho_izum.jpg"
+        alt="Изюм темный сушеный, 150 г"
+      />
+    </a>
+    <div class="card__label">-{{izum_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{izum_salep}}</div>
+      <div class="card__price card__price--common">{{izum_price}}</div>
+    </div>
+    <a href="/Orexof/izum" class="card__title">
+      Изюм темный сушеный, {{izum_mass}} г
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+    <td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/inzhir" class="card__image">
+      <img
+        src="/static/img/suho_inzir.jpg"
+        alt="Инжир отборный сушеный, 150 г"
+      />
+    </a>
+    <div class="card__label">-{{inzh_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{inzh_salep}}</div>
+      <div class="card__price card__price--common">{{inzh_price}}</div>
+    </div>
+    <a href="/Orexof/inzhir" class="card__title">
+      Инжир отборный сушеный, {{inzh_mass}} г
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+<td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/kuraga" class="card__image">
+      <img
+        src="/static/img/suho_kuraga.jpg"
+        alt="Курага сушенная без косточки, 150 г"
+      />
+    </a>
+    <div class="card__label">-{{kura_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{kura_salep}}</div>
+      <div class="card__price card__price--common">{{kura_price}}</div>
+    </div>
+    <a href="/Orexof/kuraga" class="card__title">
+      Курага сушенная без косточки, {{kura_mass}} г
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+  </tr>
+  <tr>
+  <td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/finik" class="card__image">
+      <img
+        src="/static/img/nut_finiki.jpg"
+        alt="Сушенные финики с косточкой, 150г"
+      />
+    </a>
+    <div class="card__label">-{{fini_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{fini_salep}}</div>
+      <div class="card__price card__price--common">{{fini_price}}</div>
+    </div>
+    <a href="/Orexof/finik" class="card__title">
+      Сушенные финики с косточкой, {{fini_mass}} г.
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+   <td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/chernosliv" class="card__image">
+      <img
+        src="/static/img/suho_chernosliv.jpg"
+        alt="Чернослив сушеный без косточки, 150 г"
+      />
+    </a>
+    <div class="card__label">-{{cher_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{cher_salep}}</div>
+      <div class="card__price card__price--common">{{cher_price}}</div>
+    </div>
+    <a href="/Orexof/chernosliv" class="card__title">
+      Чернослив сушеный без косточки, {{cher_mass}} г
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+    <td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/cukati" class="card__image">
+      <img
+        src="/static/img/suho_tsukati.jpg"
+        alt="Цукаты ананаса кубики микс, 150г"
+      />
+    </a>
+    <div class="card__label">-{{cuka_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{cuka_salep}}</div>
+      <div class="card__price card__price--common">{{cuka_price}}</div>
+    </div>
+    <a href="/Orexof/cukati" class="card__title">
+      Цукаты ананаса кубики микс, {{cuka_mass}} г
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+</td>
+<td>
+<div class="card">
+  <div class="card__top">
+    <a href="/Orexof/papya" class="card__image">
+      <img
+        src="/static/img/suho_papaiya.jpg"
+        alt="Сушенная папайя ломтики, 150г"
+      />
+    </a>
+    <div class="card__label">-{{papa_sale}}%</div>
+  </div>
+  <div class="card__bottom">
+    <div class="card__prices">
+      <div class="card__price card__price--discount">{{papa_salep}}</div>
+      <div class="card__price card__price--common">{{papa_price}}</div>
+    </div>
+    <a href="/Orexof/papya" class="card__title">
+    Сушенная папайя ломтики, {{papa_mass}}г
+    </a>
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+
+</td>
+
+  </tr>
+</table>
+
+       </div>
+ <footer>
+    <p>    &copy; 2023 Orehoff by mikozme. All rights reserved.</p>
+ </footer>
+   </div>
+
+
+        </body>
+                    </html>

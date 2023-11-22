@@ -1,0 +1,47 @@
+<!doctype html>
+                <html lang="en">
+                  <head>
+                      <link rel="stylesheet" href="/static/css/araxis.css">
+                    <meta charset="utf-8">
+                      <title>Чернослив сушеный</title>
+                  </head>
+                  <body>
+                    <section class="product">
+  <div class="product__photo">
+    <div class="photo-container">
+      <div class="photo-main">
+
+        <img src="/static/img/suho_chernosliv.jpg" height="350">
+      </div>
+
+    </div>
+  </div>
+  <div class="product__info">
+    <div class="title">
+      <h1>Чернослив сушенный без косточки</h1>
+      <span>{{ massa }}</span>Г
+    </div>
+    <div class="price">
+      <span>{{ price }}</span>₸
+    </div>
+
+    <div class="description">
+      <h3>ПОЛЬЗА</h3>
+      <ul>
+        <li>Витамины А, В, Е и С</li>
+        <li>Нормализует работу желудка и сердечно-сосудистой системы</li>
+        <li>Обладает антиоксидантными свойствами</li>
+        <li>Улучшает зрение</li>
+      </ul>
+    </div>
+    <form action="/Orexof/chernosliv" method="post">
+    <input type="submit" class="buy--btn" value="в корзину">
+    <div class="quantity">
+      <input type="text" id="amount" name="amount" value=1>
+    </div>
+  </div>
+</section>
+
+<butt3 type="button" onclick="document.location='/'">Назад </butt3>
+                  </body>
+                </html>

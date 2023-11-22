@@ -1,0 +1,47 @@
+<!doctype html>
+                <html lang="en">
+                  <head>
+                      <link rel="stylesheet" href="/static/css/araxis.css">
+                    <meta charset="utf-8">
+                      <title>Арахис жаренный</title>
+                  </head>
+                  <body>
+                    <section class="product">
+  <div class="product__photo">
+    <div class="photo-container">
+      <div class="photo-main">
+
+        <img src="/static/img/nut_arahis.jpg">
+      </div>
+
+    </div>
+  </div>
+  <div class="product__info">
+    <div class="title">
+      <h1>Арахис жаренный</h1>
+      <span>{{ massa }}</span>Г
+    </div>
+    <div class="price">
+      <span>{{ price }}</span>₸
+    </div>
+
+    <div class="description">
+      <h3>ПОЛЬЗА</h3>
+      <ul>
+        <li>Витамин E</li>
+        <li>Витамин РР</li>
+        <li>Витамин B</li>
+        <li>Полезно для сердечно-сосудистой системы</li>
+      </ul>
+    </div>
+    <form action="/Orexoff/araxis" method="post">
+    <input type="submit" class="buy--btn" value="в корзину">
+    <div class="quantity">
+      <input type="text" id="amount" name="amount" value=1>
+    </div>
+  </div>
+</section>
+
+<butt3 type="button" onclick="document.location='/'">Назад </butt3>
+                  </body>
+                </html>

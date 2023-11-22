@@ -1,0 +1,46 @@
+<!doctype html>
+                <html lang="en">
+                  <head>
+                      <link rel="stylesheet" href="/static/css/araxis.css">
+                    <meta charset="utf-8">
+                  </head>
+                  <body>
+                    <section class="product">
+  <div class="product__photo">
+    <div class="photo-container">
+      <div class="photo-main">
+
+        <img src="/static/img/suho_tsukati.jpg" height="350">
+      </div>
+
+    </div>
+  </div>
+  <div class="product__info">
+    <div class="title">
+      <h1>Цукаты ананаса кубики микс</h1>
+      <span>{{ massa }}</span>Г
+    </div>
+    <div class="price">
+      <span>{{ price }}</span>₸
+    </div>
+
+    <div class="description">
+      <h3>ПОЛЬЗА</h3>
+      <ul>
+        <li>Регулируют работу кишечника</li>
+        <li>Витамины A, B, C</li>
+        <li>Придают силу и энергию</li>
+        <li>Уменьшают риск развития злокачественных новообразований</li>
+      </ul>
+    </div>
+    <form action="/Orexof/cukati" method="post">
+    <input type="submit" class="buy--btn" value="в корзину">
+    <div class="quantity">
+      <input type="text" id="amount" name="amount" value=1>
+    </div>
+  </div>
+</section>
+
+<butt3 type="button" onclick="document.location='/'">Назад </butt3>
+                  </body>
+                </html>

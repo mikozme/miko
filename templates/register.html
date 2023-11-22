@@ -1,0 +1,35 @@
+<!doctype html>
+                <html lang="en">
+                  <head>
+                  <link rel="stylesheet" type="text/css" href="../static/css/login.css">
+                <meta name="viewport" content="width=device-width, initial=scale=1.0">
+                    <meta charset="utf-8">
+                    <title>Регистрация</title>
+                  </head>
+                  <body>
+                  <div class="wrapper">
+                      <h2>Регистрация</h2>
+                      <form action="/Orexof/register" method="post">
+                          <div class="input-box">
+                              <input type="text" placeholder="Введите свое имя" required name="name">
+                          </div>
+                           <div class="input-box">
+                              <input type="text" placeholder="Введите свою фамилию" required name="surname">
+                          </div>
+                          <div class="input-box">
+                              <input type="email" placeholder="Введите свою почту" required name="email">
+                          </div>
+                          <div class="input-box">
+                              <input type="password" placeholder="Введите пароль" required name="password">
+                          </div>
+                          <div class="input-box button">
+                              <input type="submit" value="Зарегистрироваться">
+                          </div>
+                          <div class="text">
+                              <h3>У вас есть аккаунт? <a href="/Orexof/login">Войти</a></h3>
+                          </div>
+                      </form>
+
+                  </div>
+                  </body>
+                </html>

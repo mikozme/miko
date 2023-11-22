@@ -1,0 +1,47 @@
+<!doctype html>
+                <html lang="en">
+                  <head>
+                      <link rel="stylesheet" href="/static/css/araxis.css">
+                    <meta charset="utf-8">
+                    <title>Изюм</title>
+                  </head>
+                  <body>
+                    <section class="product">
+  <div class="product__photo">
+    <div class="photo-container">
+      <div class="photo-main">
+
+        <img src="/static/img/suho_izum.jpg" height="350">
+      </div>
+
+    </div>
+  </div>
+  <div class="product__info">
+    <div class="title">
+      <h1>Изюм темный сушенный</h1>
+      <span>{{ massa }}</span>Г
+    </div>
+    <div class="price">
+      ₸<span>{{ price }}</span>₸
+    </div>
+
+    <div class="description">
+      <h3>ПОЛЬЗА</h3>
+      <ul>
+        <li>Укрепляет нервную систему и иммунитет</li>
+        <li>Положительно влияет на сердечную мышцу</li>
+        <li>Укрепляет нервную систему</li>
+        <li>Витамины А, В1, В2, В5 и В6, С</li>
+      </ul>
+    </div>
+    <form action="/Orexof/izum" method="post">
+    <input type="submit" class="buy--btn" value="в корзину">
+    <div class="quantity">
+      <input type="text" id="amount" name="amount" value=1>
+    </div>
+  </div>
+</section>
+
+<butt3 type="button" onclick="document.location='/'">Назад </butt3>
+                  </body>
+                </html>
